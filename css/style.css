@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  background-color: aliceblue; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #90ebf7;
+  color: black;
+  padding: 25px 60px;
+  margin-bottom: 30px; }
+  .navbar .cart {
+    background-color: #adb5bd;
+    color: #fff8f8;
+    position: relative;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px; }
+    .navbar .cart .cartAmount {
+      position: absolute;
+      border-radius: 10px;
+      top: -15px;
+      right: -3px;
+      font-size: 14px;
+      background-color: red;
+      padding: 3px; }
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 2em;
+  margin-bottom: 2em;
+  justify-content: center; }
+  .shop .item {
+    background-color: #e1e7ee; }
+    .shop .item:hover {
+      transition: all 0s;
+      border: 1px solid black; }
+    .shop .item .details {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      gap: 10px; }
+      .shop .item .details .price-quantity {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+        .shop .item .details .price-quantity .buttons {
+          display: flex;
+          gap: 7px;
+          font-size: 18px; }
+          .shop .item .details .price-quantity .buttons .bi-bag-dash {
+            color: red; }
+          .shop .item .details .price-quantity .buttons .bi-bag-plus {
+            color: #1acc1a; }
+
+i {
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2em; }
+  .shopping-cart .cart-item {
+    border: 1px solid #212529;
+    display: flex; }
+    .shopping-cart .cart-item img {
+      margin-right: 0.5em; }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .shopping-cart .cart-item .title-precio-x i {
+        font-size: 1.3em; }
+      .shopping-cart .cart-item .title-precio-x .title-precio {
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+        .shopping-cart .cart-item .title-precio-x .title-precio .cart-item-precio {
+          background-color: #212529;
+          color: white;
+          border-radius: 4px;
+          padding: 3px 6px; }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px; }
+
+.bi-bag-plus {
+  color: red; }
+
+.bi-bag-dash {
+  color: green; }
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px; }
+
+.checkout {
+  background-color: green; }
+
+.removeAll {
+  background-color: red; }
+
+.bi-x-lg {
+  color: red;
+  font-weight: bold; }
+
+.contCompr {
+  font-size: small;
+  color: blue; }
+
+/* Media Queries */
+@media (min-width: 1550px) {
+  .shop {
+    grid-template-columns: repeat(5, 223px); }
+  .shopping-cart {
+    grid-template-columns: repeat(1, 800px); }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 690px; } }
+
+@media (max-width: 1550px) {
+  .shopping-cart {
+    grid-template-columns: repeat(1, 600px); }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 490px; } }
+
+@media (max-width: 1050px) {
+  .shop {
+    grid-template-columns: repeat(3, 223px); }
+  .shopping-cart {
+    grid-template-columns: repeat(1, 480px); }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 370px; } }
+
+@media (max-width: 768px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px); }
+  .shopping-cart {
+    grid-template-columns: repeat(1, 400px); }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 290px; } }
+
+@media (max-width: 576px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px); }
+  .shopping-cart {
+    grid-template-columns: repeat(1, 300px); }
+    .shopping-cart .cart-item .title-precio-x {
+      width: 190px; } }
