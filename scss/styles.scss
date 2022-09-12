@@ -18,13 +18,26 @@ body{
     color: black;
     padding: 25px 60px;
     margin-bottom: 30px;
+    .navbar-elements{
+      .novedades{
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5em;
+      }
+    }
     .cart{
-        background-color: #adb5bd;
+        background-color: #2482e0;
         color: rgb(255, 248, 248);
         position: relative;
         font-size: 20px;
         padding: 5px;
         border-radius: 10px;
+        &:hover{
+          transition: all;
+          transform: scale(1.1);
+          background-color: white;
+          color: #2482e0;
+        }
         .cartAmount{
             position: absolute;
             border-radius: 10px;
@@ -32,6 +45,7 @@ body{
             right: -3px;
             font-size: 14px;
             background-color: red;
+            color: white;
             padding: 3px;
         }
     }
@@ -95,30 +109,30 @@ a{
         display: flex;
         img{
           margin-right: 0.5em;
+          height: 100%;
         }
         .title-precio-x {
-            width: 210px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            i{
-              font-size: 1.3em;
-            }
-            .title-precio {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                .cart-item-precio {
-                    background-color: #212529;
-                    color: white;
-                    border-radius: 4px;
-                    padding: 3px 6px;
-                  }
-              }
+          width: 220px;
+          display: flex;
+          justify-content: space-between;
+          i{
+            font-size: 1.3em;
           }
+          .title-precio {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .cart-item-precio {
+                  background-color: #212529;
+                  color: white;
+                  border-radius: 4px;
+                  padding: 3px 6px;
+                }
+            }
+        }
       }  
   }
-  
+
   .buttons {
     display: flex;
     flex-direction: row;
@@ -166,6 +180,10 @@ a{
     color: blue;
   }
   
+.card{
+  background-color: #e1e7ee;
+}
+
 /* Media Queries */
 
 
@@ -181,6 +199,9 @@ a{
           }
       }  
   }
+  .card{
+    width: 70em;
+  }
 }
 
 @media (max-width:1550px){
@@ -191,6 +212,9 @@ a{
             width: 490px;
           }
       }  
+  }
+  .card{
+    width: 50em;
   }
 }
 
@@ -206,6 +230,9 @@ a{
           }
       }  
   }
+  .card{
+    width: 40em;
+  }
 }
 
 @media (max-width:768px){
@@ -219,6 +246,9 @@ a{
             width: 290px;
           }
       }  
+  }
+  .card{
+    width: 30rem;
   }
 }
 
@@ -234,8 +264,11 @@ a{
           }
       }  
   }
+  .card{
+    width: 20em;
+  }
 }
-  
+
   
   
   

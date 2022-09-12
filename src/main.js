@@ -11,7 +11,7 @@ let generateShop = () => {
         let search = carrito.find((x) => x.id === id) || [];
         return `
         <div id=product-id-${id} class="item" id="card">
-                <img class width="223" height="150px" src=${img} alt="Teclado Gamer">
+                <img class width="221" height="150px" src=${img} alt="Teclado Gamer">
                 <div class="details">
                     <h3>${nombre}</h3>
                     <p>${desc}</p>
